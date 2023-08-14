@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet" />
+        <link href="css/bootstrap.css" rel="stylesheet" />
+        <title>Register</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="js/fetch.js"></script>
+    </head>
+
+    <body>
+        <div class="container smallBox1">
+            <div class="smallBox5">
+                <a href="login.html">
+                    <div class="logout"></div>
+                </a>
+            </div>
+            <form class="smallBox7">
+                <label class="indexLogo">My Profile</label>
+                <div class="smallBox8">
+                    <label class="enter">Name</label>
+                    <input class="enterDiv form-control" id="user_name"></input>
+                    <div id="errorName" class="form-text">
+                        Ex: abc@gmail.com.
+                    </div>
+                </div>
+                <div class="smallBox8">
+                    <label class="enter">Age</label>
+                    <input class="enterDiv form-control" type="number" id="user_age"></input>
+                    <div id="errorAge" class="form-text">
+                        Ex: abc@gmail.com.
+                    </div>
+                </div>
+                <div class="smallBox8">
+                    <label class="enter">Date of Birth</label>
+                    <input class="enterDiv form-control" type="date" id="user_dob"></input>
+                    <div id="errorDOB" class="form-text">
+                        Ex: abc@gmail.com.
+                    </div>
+                </div>
+                <div class="smallBox8">
+                    <label class="enter">Phone Number</label>
+                    <input class="enterDiv form-control" type="number" id="user_phoneNo"></input>
+                    <div id="errorPhoneNo" class="form-text">
+                        Enter 10 digit Phone No
+                    </div>
+                </div>
+                <a class="loginButton btn btn-outline-dark"  id="update_button">Update</a>
+            </form>
+        </div>
+        <script src="js/profile.js"></script>
+    </body>
+</html> 

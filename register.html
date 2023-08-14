@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet" />
+        <link href="css/bootstrap.css" rel="stylesheet" />
+        <title>Register</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container smallBox1">
+            <div class="smallBox5">
+                <a href="index.html">
+                    <div class="back"></div>
+                </a>
+            </div>
+            <form class="smallBox7">
+                <label class="indexLogo">Register</label>
+                <div class="smallBox8">
+                    <label class="enter">Email</label>
+                    <input class="enterDiv form-control" type="email" aria-describedby="errorMail" id="register_email"></input>
+                    <div id="errorMail" class="form-text">
+                        Ex: abc@gmail.com.
+                    </div>
+                </div>
+                <div class="smallBox8">
+                    <label class="enter">Password</label>
+                    <input class="enterDiv form-control" type="password" aria-describedby="passwordHelpBlock" id="register_password"></input>
+                    <div id="passwordHelpBlock" class="form-text">
+                       Password must be 8-20 characters.
+                    </div>
+                </div>
+                <div class="smallBox8">
+                    <label class="enter">Confirm Password</label>
+                    <input class="enterDiv form-control" type="password" aria-describedby="errorPassword" id="confirm_password"></input>
+                    <div id="errorPassword" class="form-text">
+                        Password did not match, Try again.
+                    </div>
+                </div>
+                <a class="loginButton btn btn-outline-dark" id="register_button">Register</a>
+            </form>
+        </div>
+        <script src="js/register.js"></script>
+    </body>
+</html> 

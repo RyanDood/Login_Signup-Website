@@ -1,0 +1,206 @@
+body {
+  background: rgba(255,255,255,1);
+}
+
+.smallBox1{
+  min-height: 93vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.smallBox2{
+  height: 120px;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.smallBox3{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.smallBox4{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+.welcomeText{
+  color: rgba(0,0,0,1);
+  font-family: Nunito;
+  font-weight: Bold;
+  font-size: 12px;
+}
+
+
+.indexLogo {
+  color: rgba(0,0,0,1);
+  font-family: Nunito;
+  font-weight: Bold;
+  font-size: 28px;
+  align-self: center;
+}
+
+.loginButton {
+  width: 110px;
+  height: 40px;
+  background: rgba(0,0,0,1);
+  color: rgba(255,255,255,1);
+  font-family: Nunito;
+  font-weight: Bold;
+  text-decoration: none;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  overflow: hidden;
+  align-self: center;
+}
+
+.registerButton {
+  width: 110px;
+  height: 40px;
+  background: rgba(217,217,217,1);
+  color: black;
+  font-family: Nunito;
+  font-weight: Bold;
+  text-decoration: none;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  overflow: hidden;
+}
+
+.smallBox5{
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.smallBox6{
+  height: 340px;
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.enter {
+  color: rgba(0,0,0,1);
+  font-family: Nunito;
+  font-weight: Bold;
+  font-size: 12px;
+}
+
+.enterDiv {
+  width: 224px;
+  height: 44px;
+  background: rgba(217,217,217,1);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border: 0px;
+  font-size: 14px;
+  font-family: Nunito;
+  font-weight: normal;
+}
+
+.logo{
+  width: 50px;
+  height: 50px;
+  background: url(arrow-left.svg);
+  overflow: hidden;
+}
+
+.back {
+  width: 28px;
+  height: 28px;
+  background: url(arrow-left.svg);
+  overflow: hidden;
+}
+
+.logout {
+  width: 28px;
+  height: 28px;
+  background: url(signout.svg);
+  overflow: hidden;
+}
+
+.smallBox7{
+  height: 500px;
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.smallBox8{
+  display: flex;
+  flex-direction: column;
+}
+
+#errorPassword{
+  display: none;
+  color: red;
+}
+
+#errorMail{
+  color: gray;
+}
+
+#passwordHelpBlock{
+  color: gray;
+}
+
+#errorMail2{
+  display: none;
+  color: red;
+}
+
+#errorAge{
+  display: none;
+  color: red;
+}
+
+#errorDOB{
+  display: none;
+  color: red;
+}
+
+#errorPhoneNo{
+  display: block;
+  color: gray;
+}
+
+#errorName{
+  display: none;
+  color: red;
+}
+
+#displayStatus{
+  display: none;
+}
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet" />
+        <link href="css/bootstrap.css" rel="stylesheet" />
+        <title>Login</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container smallBox1">
+            <div class="smallBox5">
+                <a href="index.html">
+                    <div class="back"></div>
+                </a>
+            </div>
+            <form class="smallBox6">
+                <label class="indexLogo">Login</label>
+                <div class="smallBox8">
+                    <label class="enter">Email</label>
+                    <input class="enterDiv form-control" type="email" aria-describedby="errorMail2" id="user_email"></input>
+                    <div id="errorMail2" class="form-text">
+                        Enter
+                    </div>
+                </div>
+                <div class="smallBox8">
+                    <label class="enter">Password</label>
+                    <input class="enterDiv form-control" type="password" id="user_password"></input>
+                    <div id="errorPassword" class="form-text">
+                        Password did not match, Try again.
+                    </div>
+                </div>
+                <a class="loginButton btn btn-outline-dark"  id="LoginButton">Login</a>
+            </form>
+        </div>
+        <script src="js/login.js"></script>
+    </body>
+</html> 
