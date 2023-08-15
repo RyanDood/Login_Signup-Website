@@ -3,7 +3,7 @@
 // Using Ajax for handling server side communication
 $.ajax({ 
     type: 'GET',
-    url: 'http://localhost/Login_Signup%20Website/php/fetch.php', // Connecting to php
+    url: '/php/fetch.php', // Connecting to php
     success: function(data){                              // Successfully connected with php
     var fetchedData = JSON.parse(data);                   // Displaying results based on fetched data
         if(fetchedData.status == "fetched"){

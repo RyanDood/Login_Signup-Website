@@ -1,13 +1,11 @@
-<?php header('Access-Control-Allow-Origin: *');
+<?php 
+header('Access-Control-Allow-Origin: *');
 
-// Connecting Redis 
-$redis = new Redis();
-$redis->connect('redis_server',12345);
-$redis->auth('redis_password');
+// Connecting to redis
+require 'redis_connect.php';
 
 // Connecting with the MongoDB database
-require_once __DIR__ . '/vendor/autoload.php';
-$client = new MongoDB\Client('mongodb_server');
+require 'mongodb_connect.php';
 $profileDB = $client->profile_guvi->profile;
 
 // Fetching the session data from redis

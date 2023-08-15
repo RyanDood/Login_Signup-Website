@@ -18,7 +18,7 @@ $("#register_button").on('click',function(){
                                     email_u: email,
                                     password_u: password
                                 },
-                                url: 'http://localhost/Login_Signup%20Website/php/register.php',  // Connecting to php
+                                url: '/php/register.php',  // Connecting to php
                                 success: function(data){                                  // Successfully connected with php
                                     var fetchedData = JSON.parse(data);                   // Displaying results based on fetched data
                                     if(fetchedData.status == "true"){

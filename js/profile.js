@@ -21,7 +21,7 @@ $("#update_button").on('click',function(){
                                 dob_u: dob,
                                 phoneNo_u: phoneNo
                             },
-                            url: 'http://localhost/Login_Signup%20Website/php/profile.php', // Connecting to php
+                            url: '/php/profile.php', // Connecting to php
                             success: function(data){                                // Successfully connected with php
                             var fetchedData = JSON.parse(data);                     // Displaying results based on fetched data
                                 if(fetchedData.status == "true"){

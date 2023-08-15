@@ -1,12 +1,8 @@
-<?php header('Access-Control-Allow-Origin: *');
-
-$host = "host";
-$username = "username";
-$password_1 = "password";
-$database = "database_name";
+<?php 
+header('Access-Control-Allow-Origin: *');
 
 // Connecting SQL database 
-$connect = mysqli_connect($host, $username, $password_1, $database);
+require 'sql_connect.php';  
 
 // Prepared Statement to insert data
 $insert_data = $connect->prepare("INSERT INTO login(emails, passwords) VALUES (?, ?)");

@@ -1,17 +1,11 @@
-<?php header('Access-Control-Allow-Origin: *');
+<?php 
+header('Access-Control-Allow-Origin: *');
 
-$host = "host";
-$username = "username";
-$password_1 = "password";
-$database = "database_name";
+//Connect to redis
+require 'redis_connect.php';
 
 // Connecting SQL database 
-$connect = mysqli_connect($host, $username, $password_1, $database);
-
-// Connecting Redis 
-$redis = new Redis();
-$redis->connect('redis_server',12345);
-$redis->auth('redis_password');
+require 'sql_connect.php'; 
 
 // Prepared Statement to fetch data
 $sql = $connect->prepare("SELECT id FROM login WHERE emails=? AND passwords=?");
