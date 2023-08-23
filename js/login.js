@@ -15,10 +15,11 @@ $("#LoginButton").on('click',function(){
                         password_u: user_password
                     },
                     url: '/php/login.php',   // Connecting to php
-                    success: function(data){                                // Successfully connected with php
-                        var fetchedData = JSON.parse(data);                 // Displaying results based on fetched data
+                    success: function(data){                                        // Successfully connected with php
+                        var fetchedData = JSON.parse(data);                         // Displaying results based on fetched data
                         if(fetchedData.status == "true"){
                             loginSuccess()
+                            localStorage.setItem("loginEmail",user_email);          // Storing Login Session in local storage
                         }
                         else{
                             loginFailed()

@@ -23,7 +23,7 @@ $result = $sql->get_result();
 if($result->num_rows > 0){
     if($redis){
         // Storing the session in redis
-        $redis->set('email',$email);
+        $redis->SADD("log_email", $email);
         $data['status'] = "true";
     }
 }

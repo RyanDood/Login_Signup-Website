@@ -1,5 +1,15 @@
 // Sending the user data via AJAX to the PHP server connecting MongoDB
 
+$("#logoutButton").on('click',function(){                           
+    var logoutRes = confirm("Do you want to logout?")
+    if(logoutRes) {
+        localStorage.removeItem("loginEmail");                                      // Deleting the Login Session
+        location.href = 'login.html';
+    }
+})
+
+var loginEmail = localStorage.getItem("loginEmail");
+
 $("#update_button").on('click',function(){
     var name = $("#user_name").val();                                               // Fetching the user input data from UI
     var age = $("#user_age").val();
@@ -15,7 +25,8 @@ $("#update_button").on('click',function(){
                     if(phoneNo.length == 10){
                         $.ajax({                                                    // Using Ajax for handling server side communication
                             type: 'POST',
-                            data: {                                                 // Sending the user data to php
+                            data: {
+                                email_u:  loginEmail,                                              // Sending the user data to php
                                 name_u: name,
                                 age_u: age,
                                 dob_u: dob,
@@ -26,6 +37,9 @@ $("#update_button").on('click',function(){
                             var fetchedData = JSON.parse(data);                     // Displaying results based on fetched data
                                 if(fetchedData.status == "true"){
                                     updateSuccess()
+                                }
+                                else if(fetchedData.status == "expired"){
+                                    sessionExpired()
                                 }
                             },
                             error: function(){                                      // Connection not successful with php
@@ -87,6 +101,19 @@ function serverIssue(){
     $("#errorAge").css('display','none');
     $("#errorDOB").css('display','none');
     $("#errorPhoneNo").text('Server Issue, Try Later')
+    $("#errorPhoneNo").css('display','block');
+    $("#errorPhoneNo").css('color','white');
+    $("#errorPhoneNo").css('text-align','center');
+    $("#errorPhoneNo").css('border-radius','0.25rem');
+    $("#errorPhoneNo").css('background-color','red');
+    $("#errorPhoneNo").css('margin-top','20px');
+}
+
+function sessionExpired(){ // Session Expired Message
+    $("#errorName").css('display','none');
+    $("#errorAge").css('display','none');
+    $("#errorDOB").css('display','none');
+    $("#errorPhoneNo").text('Session Expired, Please Logout');
     $("#errorPhoneNo").css('display','block');
     $("#errorPhoneNo").css('color','white');
     $("#errorPhoneNo").css('text-align','center');
