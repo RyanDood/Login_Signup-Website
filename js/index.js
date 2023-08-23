@@ -1,9 +1,9 @@
 $("#indexLoginButton").on('click',function(){
-    if(localStorage.getItem("loginEmail") != null){
+    if(localStorage.getItem("loginEmail") != null){      // Navigating directly to profile if session present
         navigateToProfile()
     }
     else{
-        navigateToLogin()
+        navigateToLogin()                               // Navigating directly to login if session absent
     }
 })
 
