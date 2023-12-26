@@ -2,7 +2,7 @@
 
 Dynamically developed Login and Signup website following the best tech practices and languages in the current industry.
 
-__Website URL__: [https://login-page-ryan.anshil.me](http://dude.anshil.me/)
+__Website URL__: http://dude.anshil.me/
 
 
 # Technologies Used:
